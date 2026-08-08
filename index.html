@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio Govindha Muskitta - Mahasiswa Ilmu Komputer dari Kota Ambon. IoT Enthusiast, Web Developer, Content Creator." />
+  <meta name="author" content="Govindha Muskitta" />
+  <meta name="keywords" content="Govindha Muskitta, portfolio, web developer, mahasiswa ilmu komputer, IoT, Ambon" />
+
+  <!-- Open Graph (Facebook, WhatsApp, Telegram preview) -->
+  <meta property="og:title" content="Govindha Muskitta | Portfolio" />
+  <meta property="og:description" content="Portfolio Govindha Muskitta - Mahasiswa Ilmu Komputer. IoT Enthusiast, Web Developer, Content Creator." />
+  <meta property="og:image" content="assets/foto-profil.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Govindha Muskitta | Portfolio" />
+  <meta name="twitter:description" content="Portfolio Govindha Muskitta - Mahasiswa Ilmu Komputer." />
+  <meta name="twitter:image" content="assets/foto-profil.jpg" />
+
+  <title>Govindha Muskitta | Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/foto-profil.jpg" />
+  <link rel="apple-touch-icon" href="assets/foto-profil.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Canvas partikel animasi background -->
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Govindha.</a>
+      <nav aria-label="Navigasi utama">
+        <ul class="nav-menu" id="navMenu" role="menubar">
+          <li role="none"><a href="#hero"     class="nav-link active" role="menuitem">Home</a></li>
+          <li role="none"><a href="#about"    class="nav-link"        role="menuitem">About</a></li>
+          <li role="none"><a href="#skills"   class="nav-link"        role="menuitem">Skills</a></li>
+          <li role="none"><a href="#projects" class="nav-link"        role="menuitem">Projects</a></li>
+          <li role="none"><a href="#contact"  class="nav-link"        role="menuitem">Contact</a></li>
+          <li role="none"><a href="#hobi"     class="nav-link"        role="menuitem">Hobi</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <i class="fa-solid fa-sun"  id="iconSun"></i>
+          <i class="fa-solid fa-moon" id="iconMoon" style="display:none;"></i>
+        </button>
+        <button class="hamburger" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <section id="hero" class="hero">
+      <div class="hero-container section-container">
+
+        <!-- Hero Text -->
+        <div class="hero-text">
+          <p class="hero-greeting">Hayyy, saya</p>
+          <h1 class="hero-title">Govindha Muskitta</h1>
+          <h2 class="hero-subtitle">
+            <span id="typingText"></span><span class="typing-cursor" aria-hidden="true">|</span>
+          </h2>
+          <p class="hero-description">
+            Mahasiswa Ilmu Komputer yang passionate dalam membangun pengalaman web yang indah, fungsional, dan user-friendly.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-folder-open"></i> Lihat Project
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fa-solid fa-envelope"></i> Hubungi Saya
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Avatar -->
+        <div class="hero-avatar">
+          <div class="avatar-wrapper">
+            <img
+              src="assets/foto-profil.jpg"
+              alt="Foto profil Govindha Muskitta"
+              class="avatar-img"
+            />
+          </div>
+        </div>
+
+      </div>
+      <!-- Blob dekoratif kanan bawah hero -->
+      <div class="hero-blob-right" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===================== ABOUT SECTION ===================== -->
+    <section id="about" class="about">
+      <div class="section-container">
+        <div class="section-header reveal-on-scroll">
+          <h2 class="section-title">Tentang <span class="accent">Saya</span></h2>
+          <p class="section-subtitle">Kenalan lebih jauh denganku</p>
+        </div>
+
+        <div class="about-content">
+          <!-- About Illustration -->
+          <div class="about-illustration reveal-on-scroll">
+            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustrasi laptop" role="img">
+              <rect x="40" y="20" width="240" height="160" rx="10" fill="#2d3748" />
+              <rect x="50" y="30" width="220" height="140" rx="6" fill="#1a1a2e" />
+              <rect x="65" y="50" width="80" height="8" rx="4" fill="#6366f1" opacity="0.9"/>
+              <rect x="65" y="68" width="130" height="6" rx="3" fill="#a5b4fc" opacity="0.7"/>
+              <rect x="65" y="82" width="60"  height="6" rx="3" fill="#34d399" opacity="0.8"/>
+              <rect x="75" y="96" width="100" height="6" rx="3" fill="#fbbf24" opacity="0.7"/>
+              <rect x="75" y="110" width="80" height="6" rx="3" fill="#a5b4fc" opacity="0.6"/>
+              <rect x="65" y="124" width="110" height="6" rx="3" fill="#6366f1" opacity="0.8"/>
+              <rect x="65" y="138" width="50" height="6" rx="3" fill="#f87171" opacity="0.7"/>
+              <ellipse cx="160" cy="192" rx="130" ry="12" fill="#4a5568" />
+              <rect x="30" y="180" width="260" height="12" rx="4" fill="#4a5568"/>
+              <rect x="140" y="178" width="40" height="8" rx="4" fill="#2d3748"/>
+            </svg>
+          </div>
+
+          <!-- About Text -->
+          <div class="about-text reveal-on-scroll">
+            <p>
+              Halo! Saya <strong>Govindha Muskitta</strong>, seorang Mahasiswa Ilmu Komputer yang memiliki minat besar terhadap pengembangan web dan desain antarmuka pengguna.
+            </p>
+            <p>
+              Saya percaya bahwa teknologi hadir untuk memudahkan kehidupan manusia, dan saya berkomitmen untuk terus belajar serta berkontribusi dalam menciptakan solusi digital yang bermakna.
+            </p>
+
+            <div class="about-info-grid">
+              <div class="about-info-item">
+                <i class="fa-solid fa-user-graduate" aria-hidden="true"></i>
+                <div>
+                  <span class="info-label">Status</span>
+                  <span class="info-value">Mahasiswa Ilmu Komputer</span>
+                </div>
+              </div>
+              <div class="about-info-item">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <div>
+                  <span class="info-label">Lokasi</span>
+                  <span class="info-value">Kota Ambon</span>
+                </div>
+              </div>
+              <div class="about-info-item">
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                <div>
+                  <span class="info-label">Fokus</span>
+                  <span class="info-value">Internet of Things</span>
+                </div>
+              </div>
+              <div class="about-info-item">
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                <div>
+                  <span class="info-label">Hobi</span>
+                  <span class="info-value">Musik &amp; Desain</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn btn-primary">
+              <i class="fa-solid fa-paper-plane"></i> Mari Terhubung
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS SECTION ===================== -->
+    <section id="skills" class="skills">
+      <div class="section-container">
+        <div class="section-header reveal-on-scroll">
+          <h2 class="section-title">Skill <span class="accent">Saya</span></h2>
+          <p class="section-subtitle">Teknologi dan tools yang saya kuasai</p>
+        </div>
+
+        <!-- Skill Cards Grid -->
+        <div class="skills-grid reveal-on-scroll">
+          <div class="skill-card">
+            <img src="assets/icons/html5.svg" alt="HTML5" width="48" height="48" />
+            <span class="skill-name">HTML5</span>
+          </div>
+          <div class="skill-card">
+            <img src="assets/icons/canva.svg" alt="Canva" width="48" height="48" />
+            <span class="skill-name">Canva</span>
+          </div>
+          <div class="skill-card">
+            <img src="assets/icons/javascript.svg" alt="JavaScript" width="48" height="48" />
+            <span class="skill-name">JavaScript</span>
+          </div>
+          <div class="skill-card">
+            <img src="assets/icons/davinci.svg" alt="DaVinci Resolve" width="48" height="48" />
+            <span class="skill-name">DaVinci Resolve</span>
+          </div>
+          <div class="skill-card">
+            <img src="assets/icons/premiere.svg" alt="Adobe Premiere Pro" width="48" height="48" />
+            <span class="skill-name">Premiere Pro</span>
+          </div>
+          <div class="skill-card">
+            <img src="assets/icons/vscode.svg" alt="VS Code" width="48" height="48" />
+            <span class="skill-name">VS Code</span>
+          </div>
+        </div>
+
+        <!-- Skill Progress Bars -->
+        <div class="skills-bars reveal-on-scroll">
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-label">HTML5</span>
+              <span class="skill-bar-percent">85%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 kemampuan 85%">
+              <div class="skill-bar-fill" data-level="85"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-label">Canva</span>
+              <span class="skill-bar-percent">80%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Canva kemampuan 80%">
+              <div class="skill-bar-fill" data-level="80"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-label">JavaScript</span>
+              <span class="skill-bar-percent">70%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript kemampuan 70%">
+              <div class="skill-bar-fill" data-level="70"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-label">DaVinci Resolve</span>
+              <span class="skill-bar-percent">65%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="DaVinci Resolve kemampuan 65%">
+              <div class="skill-bar-fill" data-level="65"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-label">Adobe Premiere Pro</span>
+              <span class="skill-bar-percent">70%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Adobe Premiere Pro kemampuan 70%">
+              <div class="skill-bar-fill" data-level="70"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-label">VS Code</span>
+              <span class="skill-bar-percent">80%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="VS Code kemampuan 80%">
+              <div class="skill-bar-fill" data-level="80"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS SECTION ===================== -->
+    <section id="projects" class="projects">
+      <div class="section-container">
+        <div class="section-header reveal-on-scroll">
+          <h2 class="section-title">My <span class="accent">Projects</span></h2>
+          <p class="section-subtitle">Beberapa karya yang telah saya buat</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal-on-scroll">
+            <div class="project-img-placeholder" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+              <i class="fa-solid fa-shop project-icon" aria-hidden="true"></i>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">E-Commerce Landing Page</h3>
+              <p class="project-desc">Halaman landing toko online dengan tampilan modern, animasi scroll, dan responsif di semua perangkat.</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                <a href="#" class="btn-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-on-scroll">
+            <div class="project-img-placeholder" style="background: linear-gradient(135deg, #0ea5e9, #06b6d4);">
+              <i class="fa-solid fa-cloud-sun project-icon" aria-hidden="true"></i>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Weather App</h3>
+              <p class="project-desc">Aplikasi cuaca yang menampilkan informasi cuaca berdasarkan kota yang dicari pengguna.</p>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span><span class="tag">API</span><span class="tag">CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                <a href="#" class="btn-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-on-scroll">
+            <div class="project-img-placeholder" style="background: linear-gradient(135deg, #f59e0b, #f97316);">
+              <i class="fa-solid fa-list-check project-icon" aria-hidden="true"></i>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Task Manager</h3>
+              <p class="project-desc">Aplikasi manajemen tugas dengan fitur tambah, edit, hapus, dan filter tugas berdasarkan status.</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                <a href="#" class="btn-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-on-scroll">
+            <div class="project-img-placeholder" style="background: linear-gradient(135deg, #10b981, #059669);">
+              <i class="fa-solid fa-palette project-icon" aria-hidden="true"></i>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">UI Component Library</h3>
+              <p class="project-desc">Kumpulan komponen UI yang dapat digunakan ulang, dibangun dengan HTML dan CSS murni tanpa framework.</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Figma</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                <a href="#" class="btn-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT SECTION ===================== -->
+    <section id="contact" class="contact">
+      <div class="section-container">
+        <div class="section-header reveal-on-scroll">
+          <h2 class="section-title">Hubungi <span class="accent">Saya</span></h2>
+          <p class="section-subtitle">Ada project menarik? Mari berkolaborasi!</p>
+        </div>
+
+        <div class="contact-content">
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper reveal-on-scroll">
+            <form id="contactForm" novalidate aria-label="Formulir kontak">
+              <div class="form-group">
+                <label for="inputNama" class="form-label">Nama</label>
+                <input type="text" id="inputNama" name="nama" class="form-input" placeholder="Masukkan nama Anda" autocomplete="name" />
+                <span class="form-error" id="errorNama" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" id="inputEmail" name="email" class="form-input" placeholder="email@contoh.com" autocomplete="email" />
+                <span class="form-error" id="errorEmail" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="inputPesan" class="form-label">Pesan</label>
+                <textarea id="inputPesan" name="pesan" class="form-input form-textarea" placeholder="Tuliskan pesan Anda di sini..." rows="5"></textarea>
+                <span class="form-error" id="errorPesan" role="alert" aria-live="polite"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
+              </button>
+              <p id="formSuccess" class="form-success" role="alert" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="contact-info reveal-on-scroll">
+            <h3 class="contact-info-title">Info Kontak</h3>
+            <ul class="contact-detail-list">
+              <li class="contact-detail-item">
+                <div class="contact-icon-wrap" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <span class="contact-detail-label">Email</span>
+                  <a href="mailto:govinmsqtta@gmail.com" class="contact-detail-value">govinmsqtta@gmail.com</a>
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <div class="contact-icon-wrap" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <span class="contact-detail-label">Lokasi</span>
+                  <span class="contact-detail-value">Kota Ambon</span>
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <div class="contact-icon-wrap" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></div>
+                <div>
+                  <span class="contact-detail-label">WhatsApp</span>
+                  <a href="https://wa.me/6282219772822" class="contact-detail-value" target="_blank" rel="noopener">082219772822</a>
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <div class="contact-icon-wrap" aria-hidden="true"><i class="fa-brands fa-telegram"></i></div>
+                <div>
+                  <span class="contact-detail-label">Telegram</span>
+                  <a href="https://t.me/+6282219772822" class="contact-detail-value" target="_blank" rel="noopener">Govindha Muskitta</a>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Tombol sosial media -->
+            <div class="social-links" aria-label="Media sosial">
+              <a href="https://instagram.com/govindha_muskitta" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="https://t.me/+6282219772822" class="social-btn" aria-label="Telegram" target="_blank" rel="noopener">
+                <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+              </a>
+              <a href="https://facebook.com/GovindaMuskitta" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a href="https://tiktok.com/@govinnn" class="social-btn" aria-label="TikTok" target="_blank" rel="noopener">
+                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+              </a>
+              <a href="https://wa.me/6282219772822" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  <!-- ===================== HOBI SECTION ===================== -->
+  <section id="hobi" class="hobi">
+    <div class="section-container">
+
+      <div class="section-header reveal-on-scroll">
+        <h2 class="section-title">Hobi <span class="accent">Saya</span></h2>
+        <p class="section-subtitle">Hal-hal yang saya sukai di luar akademik</p>
+      </div>
+
+      <div class="hobi-grid reveal-on-scroll">
+
+        <div class="hobi-card">
+          <div class="hobi-icon-wrap">
+            <i class="fa-solid fa-music"></i>
+          </div>
+          <h3 class="hobi-title">Musik</h3>
+          <p class="hobi-desc">Saya menikmati mendengarkan dan memainkan musik sebagai cara relaksasi dan ekspresi diri.</p>
+        </div>
+
+        <div class="hobi-card">
+          <div class="hobi-icon-wrap">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <h3 class="hobi-title">Desain Grafis</h3>
+          <p class="hobi-desc">Membuat konten visual yang menarik menggunakan Canva dan Adobe Premiere Pro.</p>
+        </div>
+
+        <div class="hobi-card">
+          <div class="hobi-icon-wrap">
+            <i class="fa-solid fa-video"></i>
+          </div>
+          <h3 class="hobi-title">Video Editing</h3>
+          <p class="hobi-desc">Menyunting video kreatif menggunakan DaVinci Resolve dan Adobe Premiere Pro.</p>
+        </div>
+
+        <div class="hobi-card">
+          <div class="hobi-icon-wrap">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3 class="hobi-title">Coding</h3>
+          <p class="hobi-desc">Membangun proyek web dan bereksperimen dengan teknologi baru di waktu luang.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <p class="footer-copy">
+      &copy; <span id="footerYear"></span> Govindha Muskitta. Dibuat dengan
+      <i class="fa-solid fa-heart" style="color:#ef4444;"></i>
+    </p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
